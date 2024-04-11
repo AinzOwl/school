@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Cookies from "@/components/cookies";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <main className="flex flex-col relative z-10 w-screen md:w-4/5 p-10 pb-20 mx-auto gap-5 items-center justify-stretch h-screen">
         {children}
         </main>
+        <Cookies />
         <div className="fixed top-0 left-0 h-screen w-screen bg-[url('/images/blur.svg')] bg-top bg-cover bg-no-repeat opacity-[0.3] will-change-transform"></div>
       </body>
     </html>
